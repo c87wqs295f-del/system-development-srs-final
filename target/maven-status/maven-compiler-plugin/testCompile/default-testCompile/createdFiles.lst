@@ -1,0 +1,7 @@
+com/fs/srs/domain/RequestTest.class
+com/fs/srs/service/RequestServiceTest.class
+com/fs/srs/service/InMemoryUserRepository.class
+com/fs/srs/domain/PriorityTest.class
+com/fs/srs/service/AuthServiceTest.class
+com/fs/srs/service/InMemoryRequestRepository.class
+com/fs/srs/repository/SqliteRepositoryIntegrationTest.class

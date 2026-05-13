@@ -1,0 +1,95 @@
+<svg viewBox="0 0 1200 680" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif">
+<title>ER diagram — SQLite schema</title>
+<defs>
+  <marker id="crowfoot" viewBox="0 0 16 16" refX="16" refY="8" markerWidth="16" markerHeight="16" orient="auto">
+    <path d="M0,8 L12,8 M12,2 L16,8 L12,14 M12,8 L16,8" fill="none" stroke="#141413" stroke-width="1.4"/>
+  </marker>
+  <marker id="oneone" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="12" markerHeight="12" orient="auto">
+    <path d="M6,1 L6,11 M10,1 L10,11" fill="none" stroke="#141413" stroke-width="1.4"/>
+  </marker>
+</defs>
+<style>
+  .tbl { fill:#ffffff; stroke:#141413; stroke-width:1.3; }
+  .tblhead { fill:#eef1f5; stroke:#141413; stroke-width:1.3; }
+  .tblname { font-size:14px; font-weight:700; fill:#141413; text-anchor:middle; }
+  .col { font-size:12px; fill:#141413; font-family:ui-monospace,SFMono-Regular,Menlo,monospace; }
+  .pk { font-weight:700; }
+  .fk { fill:#1d6bd0; }
+  .sep { stroke:#141413; stroke-width:0.6; }
+  .rel { stroke:#141413; stroke-width:1.4; fill:none; }
+  .card { font-size:11.5px; fill:#5b6170; font-family:ui-monospace,SFMono-Regular,Menlo,monospace; }
+  .note { font-size:11.5px; fill:#5b6170; font-style:italic; }
+</style>
+<g>
+  <rect class="tblhead" x="60" y="60" width="300" height="32" rx="4"/>
+  <text class="tblname" x="210" y="82">users</text>
+  <rect class="tbl" x="60" y="92" width="300" height="200" rx="0"/>
+  <text class="col pk" x="80" y="114">PK  id            INTEGER AUTOINCREMENT</text>
+  <line class="sep" x1="60" y1="122" x2="360" y2="122"/>
+  <text class="col" x="80" y="142">    username      TEXT UNIQUE NOT NULL</text>
+  <text class="col" x="80" y="162">    password      TEXT NOT NULL</text>
+  <text class="col" x="80" y="182">    full_name     TEXT NOT NULL</text>
+  <text class="col" x="80" y="202">    email         TEXT NOT NULL</text>
+  <text class="col" x="80" y="222">    role          TEXT CHECK IN</text>
+  <text class="col" x="80" y="240">                   ('EMP','AGENT','MGR')</text>
+  <text class="note" x="80" y="270">"role" is the discriminator read by</text>
+  <text class="note" x="80" y="284">SqliteUserRepository to pick subclass</text>
+</g>
+<g>
+  <rect class="tblhead" x="450" y="60" width="340" height="32" rx="4"/>
+  <text class="tblname" x="620" y="82">requests</text>
+  <rect class="tbl" x="450" y="92" width="340" height="360" rx="0"/>
+  <text class="col pk" x="470" y="114">PK  id            INTEGER AUTOINCREMENT</text>
+  <line class="sep" x1="450" y1="122" x2="790" y2="122"/>
+  <text class="col" x="470" y="142">    title         TEXT NOT NULL</text>
+  <text class="col" x="470" y="162">    description   TEXT NOT NULL</text>
+  <text class="col" x="470" y="182">    category      TEXT NOT NULL</text>
+  <text class="col" x="470" y="202">    priority      TEXT NOT NULL</text>
+  <text class="col" x="470" y="222">    status        TEXT NOT NULL</text>
+  <text class="col fk" x="470" y="244">FK  submitter_id  INTEGER NOT NULL</text>
+  <text class="col fk" x="470" y="264">FK  assignee_id   INTEGER NULLABLE</text>
+  <text class="col" x="470" y="286">    created_at    TEXT NOT NULL</text>
+  <text class="col" x="470" y="306">    updated_at    TEXT NOT NULL</text>
+  <text class="col" x="470" y="326">    resolved_at   TEXT NULLABLE</text>
+  <text class="col" x="470" y="346">    closed_at     TEXT NULLABLE</text>
+  <line class="sep" x1="450" y1="358" x2="790" y2="358"/>
+  <text class="note" x="470" y="380">Indexes: status, assignee_id,</text>
+  <text class="note" x="470" y="394">submitter_id (list queries)</text>
+  <text class="note" x="470" y="420">Datetimes as ISO-8601 text</text>
+  <text class="note" x="470" y="434">(no native DATETIME in SQLite)</text>
+</g>
+<g>
+  <rect class="tblhead" x="870" y="360" width="280" height="32" rx="4"/>
+  <text class="tblname" x="1010" y="382">comments</text>
+  <rect class="tbl" x="870" y="392" width="280" height="180" rx="0"/>
+  <text class="col pk" x="890" y="414">PK  id          INTEGER</text>
+  <line class="sep" x1="870" y1="422" x2="1150" y2="422"/>
+  <text class="col fk" x="890" y="442">FK  request_id  INTEGER NOT NULL</text>
+  <text class="col fk" x="890" y="462">FK  author_id   INTEGER NOT NULL</text>
+  <text class="col" x="890" y="482">    text        TEXT</text>
+  <text class="col" x="890" y="502">    created_at  TEXT</text>
+  <line class="sep" x1="870" y1="514" x2="1150" y2="514"/>
+  <text class="note" x="890" y="534">ON DELETE CASCADE — enforces the</text>
+  <text class="note" x="890" y="550">composition at the DB layer</text>
+</g>
+<path class="rel" d="M 360,170 L 420,170 L 420,240 L 450,240" marker-start="url(#oneone)" marker-end="url(#crowfoot)"/>
+<text class="note" x="365" y="206">submits</text>
+<path class="rel" d="M 360,220 L 400,220 L 400,262 L 450,262" marker-start="url(#oneone)" marker-end="url(#crowfoot)"/>
+<text class="note" x="360" y="252">handles</text>
+<path class="rel" d="M 790,420 L 870,420" marker-start="url(#oneone)" marker-end="url(#crowfoot)"/>
+<text class="note" x="795" y="440">owns  [CASCADE]</text>
+<path class="rel" d="M 250,292 L 250,480 L 870,480" marker-start="url(#oneone)" marker-end="url(#crowfoot)"/>
+<text class="note" x="260" y="472">wrote</text>
+<g transform="translate(60, 500)">
+  <rect x="0" y="0" width="350" height="160" rx="4" fill="#ffffff" stroke="#141413" stroke-width="1"/>
+  <text class="tblname" x="175" y="22" text-anchor="middle">Legend</text>
+  <line x1="16" y1="48" x2="90" y2="48" class="rel" marker-start="url(#oneone)" marker-end="url(#crowfoot)"/>
+  <text class="col" x="100" y="52">one-to-many (FK relation)</text>
+  <text class="col pk" x="16" y="78">PK</text>
+  <text class="col" x="46" y="78">= Primary key</text>
+  <text class="col fk" x="16" y="100">FK</text>
+  <text class="col" x="46" y="100">= Foreign key</text>
+  <text class="note" x="16" y="128">CASCADE = child rows deleted</text>
+  <text class="note" x="16" y="144">with parent (composition)</text>
+</g>
+</svg>

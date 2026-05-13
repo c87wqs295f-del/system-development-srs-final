@@ -1,0 +1,37 @@
+package com.fs.srs.domain;
+
+import java.time.LocalDateTime;
+
+/**
+ * A note left on a {@link Request}. Part-of a Request by composition —
+ * if the Request is deleted, its Comments are meaningless and go with it
+ * (Session 6: composition = "is-part-of", drawn as a filled diamond).
+ */
+public class Comment {
+
+    private Long id;
+    private final Long requestId;
+    private final User author;
+    private final String text;
+    private final LocalDateTime createdAt;
+
+    public Comment(Long id, Long requestId, User author, String text, LocalDateTime createdAt) {
+        this.id = id;
+        this.requestId = requestId;
+        this.author = author;
+        this.text = text;
+        this.createdAt = createdAt;
+    }
+
+    /** Convenience constructor for new comments (id assigned by the repository). */
+    public Comment(Long requestId, User author, String text) {
+        this(null, requestId, author, text, LocalDateTime.now());
+    }
+
+    public Long getId() { return id; }
+    public void setId(Long id) { this.id = id; }
+    public Long getRequestId() { return requestId; }
+    public User getAuthor() { return author; }
+    public String getText() { return text; }
+    public LocalDateTime getCreatedAt() { return createdAt; }
+}
