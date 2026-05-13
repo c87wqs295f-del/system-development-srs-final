@@ -1,15 +1,11 @@
-/* Service Request Hub — pastel & playful skin
-   Palette: lavender, mint, peach, soft-yellow, cream.
-   Goal: look distinctive but keep the structure the controllers expect. */
-
 :root {
-  --bg:        #fdf7fb;          /* very pale pink-cream */
+  --bg:        #fdf7fb;          
   --bg-card:   #ffffff;
-  --fg:        #322945;          /* deep plum */
-  --fg-muted:  #7a6f8f;          /* dusty lilac */
-  --border:    #e7dff1;          /* misty lavender */
-  --accent:    #7a5af8;          /* soft violet */
-  --accent-2:  #ff9ec7;          /* candy pink */
+  --fg:        #322945;          
+  --fg-muted:  #7a6f8f;          
+  --border:    #e7dff1;          
+  --accent:    #7a5af8;          
+  --accent-2:  #ff9ec7;          
   --mint:      #bdf0d2;
   --peach:     #ffd9b3;
   --sun:       #fff1a8;
