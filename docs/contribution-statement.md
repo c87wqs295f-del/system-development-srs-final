@@ -57,7 +57,30 @@ These were decided together in team meetings and belong to the whole group:
 - **Jira tickets** Every ticket is assigned to the
   person who implemented it; review comments are part of the ticket history.
 
-## 5. Declaration
+## 5. Use of AI-supported tools
+
+AI-supported tools such as ChatGPT and Claude were used selectively during the
+project as supporting development tools.
+
+The overall architecture, class design, domain model, lifecycle logic, Java
+implementation, Jira organization, and UML/ER diagrams were developed by the
+team independently.
+
+Jira tickets, task structure, and ticket titles were created by the team.
+ChatGPT was occasionally used to refine ticket descriptions and acceptance
+criteria based on team-written ideas and implementation goals.
+
+AI support was mainly used in areas that were not covered in detail during the
+course, especially frontend implementation and UI-related code. In addition,
+AI tools were used to refine documentation text based on team-written bullet
+points, support debugging, explain framework behavior, and speed up repetitive
+implementation tasks.
+
+All generated suggestions were reviewed, adapted, and integrated manually by
+the team. Final technical decisions, application structure, business rules,
+and testing logic remained the responsibility of the project members.
+
+## 6. Declaration
 
 We confirm that the split above accurately reflects our individual
 contributions to this project.
