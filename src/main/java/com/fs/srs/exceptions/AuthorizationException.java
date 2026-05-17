@@ -1,6 +1,6 @@
 package com.fs.srs.exceptions;
 
-/** Thrown when the logged-in user tries to perform an action their role does not permit. */
+/** Used when the user tries to do something its role should not be ale to */
 public class AuthorizationException extends RuntimeException {
     public AuthorizationException(String message) {
         super(message);
