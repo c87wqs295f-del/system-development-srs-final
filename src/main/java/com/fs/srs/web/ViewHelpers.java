@@ -61,7 +61,11 @@ public final class ViewHelpers {
                   <link rel="stylesheet" href="/static/style.css">
                 </head>
                 <body>
-                  <header><h1>Service Request Management</h1></header>
+                  <header>
+  <a href="/" class="brand-logo-link">
+    <img src="/static/logo.png" alt="WinTick Logo" class="brand-logo">
+  </a>
+</header>
                   %s
                   <main>%s</main>
                 </body>
