@@ -1,6 +1,6 @@
 package com.fs.srs.domain;
 
-/** A manager. Can reassign, change priority, see all requests, and generate reports. */
+/** A manager can reassign, change priority, see all requests, and generate reports. */
 public class Manager extends User {
 
     public Manager(Long id, String username, String password, String fullName, String email) {
