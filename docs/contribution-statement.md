@@ -85,6 +85,6 @@ and testing logic remained the responsibility of the project members.
 We confirm that the split above accurately reflects our individual
 contributions to this project.
 
-Date: 17.05
+Date: 17.05.2026
 
 Kevin Q.  Melvin B.   Patricia G.   Kaan A.
