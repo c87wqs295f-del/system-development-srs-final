@@ -15,10 +15,7 @@ import java.util.List;
 import java.util.Optional;
 
 /**
- * SQLite-backed implementation of {@link UserRepository}.
- * <p>
- * Realizes the {@code UserRepository} interface — in the UML this is drawn
- * with a dashed line + closed hollow triangle (Session 6 "realization").
+ * SQL backed implementation of UserRepository.
  */
 public class SqliteUserRepository implements UserRepository {
 
@@ -91,7 +88,7 @@ public class SqliteUserRepository implements UserRepository {
         }
     }
 
-    /* ------------------ helpers ------------------ */
+    /* helpers */
 
     @FunctionalInterface
     private interface Binder {
@@ -110,7 +107,7 @@ public class SqliteUserRepository implements UserRepository {
         return Optional.empty();
     }
 
-    /** Factory method: picks the right subclass from the role column. */
+    /** picks the right subclass from the role column. */
     static User rowToUser(ResultSet rs) throws SQLException {
         long id         = rs.getLong("id");
         String username = rs.getString("username");
