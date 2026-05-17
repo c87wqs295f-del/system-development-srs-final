@@ -130,18 +130,14 @@ public class RequestService {
         return r;
     }
 
-    /* ------------------ helpers ------------------ */
+  
 
     private Request requireRequest(long id) {
         return requests.findById(id)
                 .orElseThrow(() -> new ValidationException("Request " + id + " not found"));
     }
 
-    /**
-     * Role-based rules for who may drive which transitions. Kept in one place
-     * so the grading-interview answer is easy: "if you want to see the rules,
-     * they are all here."
-     */
+
     private void authorizeTransition(User actor, Request r, Status target) {
         boolean isManager  = actor instanceof Manager;
         boolean isAssignee = r.getAssignee() != null && r.getAssignee().getId().equals(actor.getId());
