@@ -18,11 +18,8 @@ import java.util.List;
 
 /**
  * Application service that orchestrates request operations and enforces
- * role-based authorization. It relies on {@link Request}'s own domain
- * methods for lifecycle invariants — this service does not re-implement them.
- * <p>
- * Depends on the repository interfaces only (Dependency Inversion). Swapping
- * SQLite for another backing store does not change this class.
+ * role-based authorization. It relies on Request domain
+ * Depends on the repository interfaces only Swapping SQLite for another backing store does not change this class.
  */
 public class RequestService {
 
@@ -66,7 +63,7 @@ public class RequestService {
         return r;
     }
 
-    /** Transition a request's status; authorization depends on the target state. */
+    /** Transition a request's status */
     public Request transitionStatus(User actor, long requestId, Status newStatus) {
         Request r = requireRequest(requestId);
         authorizeTransition(actor, r, newStatus);
@@ -75,7 +72,7 @@ public class RequestService {
         return r;
     }
 
-    /** Change priority (managers only). */
+    /** Change priority can only be done by manager */
     public Request changePriority(User actor, long requestId, Priority priority) {
         if (!(actor instanceof Manager)) {
             throw new AuthorizationException("Only a manager can change priority");
@@ -103,10 +100,9 @@ public class RequestService {
         return r;
     }
 
-    /* ------------------ queries ------------------ */
 
     /**
-     * Return the list of requests visible to {@code actor}:
+     * Return the list of requests visible to each role
      *   Employee  -> their submissions;
      *   Agent     -> their assignments;
      *   Manager   -> everything.
