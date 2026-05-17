@@ -1,5 +1,4 @@
-# Enterprise Service Request Management System
-## OO Analysis & Design 
+# Enterprise Service Request Management System (OO Analysis & Design )
 
 Course: Systems Development (Prof. Dr. Kai Spohrer)
 
