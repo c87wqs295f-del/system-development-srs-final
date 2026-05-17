@@ -9,8 +9,7 @@ import io.javalin.http.Context;
 import io.javalin.http.staticfiles.Location;
 
 /**
- * Javalin application bootstrap: wires routes to controllers and sets up
- * the "require login" filter.
+ * Javalin application bootstrap: wires routes to controllers and sets up the "require login" filter.
  */
 public class WebApp {
 
@@ -62,8 +61,7 @@ public class WebApp {
     }
 
     /**
-     * Pulls the logged-in user from the session. Routes that registered after
-     * the "before" filter are guaranteed to have a user id in session.
+     * Pulls the logged-in user from the session.
      */
     public User getUserFromSession(Context ctx) {
         Long userId = ctx.sessionAttribute(AuthController.SESSION_USER_ID);
@@ -74,7 +72,7 @@ public class WebApp {
         return users.findById(userId).orElse(null);
     }
 
-    /** Convenience static accessor used by controllers — set by {@link com.fs.srs.Main}. */
+    /** Convenience static accessor used by controllers, set by com.fs.srs.Main. */
     private static WebApp INSTANCE;
     public static void setInstance(WebApp app) { INSTANCE = app; }
     public static User requireUser(Context ctx) {
