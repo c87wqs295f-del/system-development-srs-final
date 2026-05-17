@@ -55,7 +55,7 @@ These were decided together in team meetings and belong to the whole group:
 - **Git commits** on the GitHub repository. Each feature branch is authored
   by the primary contributor above; pull-request reviews by the stated
   reviewers.
-- **Jira tickets** (project _TO FILL IN_). Every ticket is assigned to the
+- **Jira tickets** Every ticket is assigned to the
   person who implemented it; review comments are part of the ticket history.
 
 ## 5. Declaration
