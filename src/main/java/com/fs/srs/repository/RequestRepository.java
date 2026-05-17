@@ -6,7 +6,7 @@ import com.fs.srs.domain.Status;
 import java.util.List;
 import java.util.Optional;
 
-/** Abstraction over request storage. See {@link UserRepository} for rationale. */
+/** Abstraction over request storage. See UserRepository for rationale. */
 public interface RequestRepository {
 
     Optional<Request> findById(long id);
@@ -19,6 +19,6 @@ public interface RequestRepository {
 
     List<Request> findByStatus(Status status);
 
-    /** Persists a new request (assigning an id) or updates an existing one. */
+    /** Saves a new request and assigns an id or updates an existing one. */
     void save(Request request);
 }
