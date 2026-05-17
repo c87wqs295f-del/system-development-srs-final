@@ -7,7 +7,7 @@ be fair and the interview can start from a shared picture of the work.
 
 Fill in the cells with a short phrase (e.g. "primary author", "reviewed",
 "pair-programmed with X"). Git history and Jira ticket ownership back up
-each claim — see Section 4.
+each claim.
 
 ## 1. Team members and rough effort split
 
