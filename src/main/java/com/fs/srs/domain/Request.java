@@ -11,13 +11,11 @@ import java.util.Map;
 import java.util.Set;
 
 /**
- * A service request submitted by an {@link Employee} and handled by a
- * {@link ServiceAgent}.
+ * A service request submitted by an Employee and handled by a
+ * ServiceAgent.
  * <p>
- * Owns its own lifecycle. The transition rules between {@link Status} values
- * are enforced in {@link #transitionTo(Status)} — callers cannot bypass them.
- * Keeping the invariants inside the class (rather than scattered across
- * service code) is encapsulation as taught in Session 2.
+ * Owns its own lifecycle. The transition rules between Status values
+ * are enforced in  #transitionTo(Status) callers cannot bypass them.
  */
 public class Request {
 
@@ -126,7 +124,7 @@ public class Request {
 
     /**
      * Used by the repository to rehydrate comments from storage without
-     * touching {@code updatedAt} (the comment was already saved, so the
+     * touching  updatedAt (the comment was already saved, so the
      * request has not actually been modified now).
      */
     public void loadComment(Comment comment) {
@@ -135,8 +133,8 @@ public class Request {
     }
 
     /**
-     * @return {@code true} if the current time is past the SLA deadline and
-     *         the request is not yet RESOLVED or CLOSED.
+     *  if the current time is past the Service Level Agreenent deadline and
+     *  the request is not yet RESOLVED or CLOSED.
      */
     public boolean isOverdue() {
         if (status == Status.RESOLVED || status == Status.CLOSED) return false;
@@ -148,9 +146,9 @@ public class Request {
         return createdAt.plusHours(priority.getSlaHours());
     }
 
-    /* ------------------------------------------------------------------ */
-    /*  Getters / setters (mundane plumbing, not shown on the UML diagram) */
-    /* ------------------------------------------------------------------ */
+    
+    /*  Getters / setters  */
+
 
     public Long getId() { return id; }
     public void setId(Long id) { this.id = id; }
