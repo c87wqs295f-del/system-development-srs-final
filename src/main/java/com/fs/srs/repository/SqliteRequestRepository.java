@@ -19,7 +19,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-/** SQLite-backed implementation of {@link RequestRepository}. */
+/** SQL implementation of RequestRepository. */
 public class SqliteRequestRepository implements RequestRepository {
 
     private final Connection conn;
@@ -68,7 +68,7 @@ public class SqliteRequestRepository implements RequestRepository {
         persistComments(request);
     }
 
-    /* ------------------ INSERT / UPDATE ------------------ */
+    /* insert and update querys */
 
     private void insert(Request r) {
         String sql = """
@@ -121,7 +121,7 @@ public class SqliteRequestRepository implements RequestRepository {
         ps.setString(11, r.getClosedAt()   == null ? null : r.getClosedAt().toString());
     }
 
-    /* ------------------ COMMENTS ------------------ */
+    /* for the comments*/
 
     private void persistComments(Request r) {
         // Only brand-new comments need persisting. The simple strategy is:
@@ -147,7 +147,7 @@ public class SqliteRequestRepository implements RequestRepository {
         }
     }
 
-    /* ------------------ query helpers ------------------ */
+    /* query helpers */
 
     @FunctionalInterface
     private interface Binder {
