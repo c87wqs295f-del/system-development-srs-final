@@ -14,28 +14,29 @@ each claim — see Section 4.
 
 | Name         | Approx. hours | Main areas of responsibility                     |
 |--------------|---------------|--------------------------------------------------|
-| _TO FILL IN_ | _TO FILL IN_  | _e.g. domain model, tests_                       |
-| _TO FILL IN_ | _TO FILL IN_  | _e.g. persistence layer, schema_                 |
-| _TO FILL IN_ | _TO FILL IN_  | _e.g. web layer, CSS, demo prep_                 |
+| Kevin Q. | ~28h   | architecture, service layer, authentication, web flow |
+|  Melvin B. | ~30h   | domain model, state machine, validation, tests |
+|  Patricia G. | ~26h     | OOAD documentation, UML, ER diagram, SOLID analysis |
+|   Kaan A.  | ~26h     | persistence layer, SQLite schema, integration tests, demo |
 
 ## 2. Per-artefact ownership
 
 | Artefact / module                    | Primary      | Reviewer(s)  |
 |--------------------------------------|--------------|--------------|
-| Requirements & OOAD document          | _TO FILL IN_ | _TO FILL IN_ |
-| UML class diagram                     | _TO FILL IN_ | _TO FILL IN_ |
-| ER diagram                            | _TO FILL IN_ | _TO FILL IN_ |
-| Domain classes (`domain/`)            | _TO FILL IN_ | _TO FILL IN_ |
-| Exceptions (`exceptions/`)            | _TO FILL IN_ | _TO FILL IN_ |
-| Repositories (`repository/`)          | _TO FILL IN_ | _TO FILL IN_ |
-| Services (`service/`)                 | _TO FILL IN_ | _TO FILL IN_ |
-| Web layer (`web/`)                    | _TO FILL IN_ | _TO FILL IN_ |
-| Domain tests                          | _TO FILL IN_ | _TO FILL IN_ |
-| Service tests                         | _TO FILL IN_ | _TO FILL IN_ |
-| Integration test                      | _TO FILL IN_ | _TO FILL IN_ |
-| Stylesheet & demo data                | _TO FILL IN_ | _TO FILL IN_ |
-| Presentation deck                     | _TO FILL IN_ | _TO FILL IN_ |
-| Rehearsal / demo script               | _TO FILL IN_ | _TO FILL IN_ |
+| Requirements & OOAD document          | Patricia G.  | Kevin Q., Melvin B. |
+| UML class diagram                     | Patricia G.  | Melvin B. |
+| ER diagram                            | Patricia G.  | Kaan A. |
+| Domain classes (`domain/`)            | Melvin B. | Kevin Q.  |
+| Exceptions (`exceptions/`)            | Melvin B. | Kevin Q.  |
+| Repositories (`repository/`)          | Kaan A. | Kevin Q.  |
+| Services (`service/`)                 | Kevin Q. | Melvin B. |
+| Web layer (`web/`)                    | Kevin Q. | Kaan A.  |
+| Domain tests                          | Melvin B. | Kevin Q. |
+| Service tests                         | Kevin Q. | Melvin B.  |
+| Integration test                      | Kaan A. | Melvin B.  |
+| Stylesheet & demo data                | Kaan A. | Patricia G.   |
+| Presentation deck                     | Patricia G.  | all team members |
+| Rehearsal / demo script               | Kevin Q. | all team members |
 
 ## 3. Joint decisions
 
@@ -62,6 +63,6 @@ These were decided together in team meetings and belong to the whole group:
 We confirm that the split above accurately reflects our individual
 contributions to this project.
 
-Date: _TO FILL IN_
+Date: 17.05
 
-_TO FILL IN_   _TO FILL IN_   _TO FILL IN_
+Kevin Q.  Melvin B.   Patricia G.   Kaan A.
