@@ -5,7 +5,7 @@ import java.time.LocalDateTime;
 
 public class Comment {
 
-    private Long id;
+    private Long id; 
     private final Long requestId;
     private final User author;
     private final String text;
@@ -19,7 +19,7 @@ public class Comment {
         this.createdAt = createdAt;
     }
 
-    /** Convenience constructor for new comments (id assigned by the repository). */
+    /**  constructor for new comments (id asigned by the repository). */
     public Comment(Long requestId, User author, String text) {
         this(null, requestId, author, text, LocalDateTime.now());
     }
