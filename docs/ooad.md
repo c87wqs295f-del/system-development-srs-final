@@ -376,7 +376,7 @@ The project was developed collaboratively by all team members. While major
 architectural and design decisions were discussed together, each member took
 primary responsibility for specific areas of the system.
 
-## Kevin — Architecture & Service Layer
+## Kevin: Architecture & Service Layer
 
 Kevin focused mainly on the overall application architecture and the service
 layer. This included the coordination of the layered structure
@@ -387,7 +387,7 @@ web layer using Javalin.
 In addition, Kevin contributed to the overall application flow and supported
 the integration between persistence and frontend functionality.
 
-## Melvin — Domain Model, State Machine & Testing
+## Melvin: Domain Model, State Machine & Testing
 
 Melvin primarily worked on the domain model and lifecycle logic of the
 application. This included the implementation of the `Request` entity,
@@ -397,7 +397,7 @@ A major focus was ensuring that lifecycle transitions and domain invariants
 remained consistent and testable. Melvin also contributed to the unit tests
 for the domain layer.
 
-## Patricia — OOAD Documentation, UML & Design Principles
+## Patricia: OOAD Documentation, UML & Design Principles
 
 Patricia focused on the object-oriented analysis and design documentation,
 including the UML class diagram, ER diagram, and the documentation of SOLID
@@ -406,7 +406,7 @@ principles and design decisions.
 Additionally, Patricia contributed to the repository abstractions and helped
 align the documentation with the implemented architecture.
 
-## Kaan — Persistence Layer & Database Integration
+## Kaan: Persistence Layer & Database Integration
 
 Kaan primarily worked on the persistence layer and SQLite integration. This
 included the database schema, repository implementations, JDBC mapping,
