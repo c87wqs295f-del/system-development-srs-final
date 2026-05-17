@@ -34,21 +34,25 @@ body {
 
 /* ---- Header ---- */
 header {
-  padding: 18px 28px;
-  background: linear-gradient(120deg, var(--accent) 0%, var(--accent-2) 100%);
-  color: #fff;
-  border-bottom: none;
-  box-shadow: var(--shadow);
+  padding: 14px 28px;
+  background: #ffffff;
+  color: var(--fg);
+  border-bottom: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  align-items: center;
 }
-header h1 {
-  margin: 0;
-  font-size: 19px;
-  letter-spacing: 0.3px;
-  font-weight: 800;
+
+.brand-logo-link {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
 }
-header h1::before {
-  content: "✺ ";
-  margin-right: 4px;
+
+.brand-logo {
+  height: 64px;
+  width: auto;
+  display: block;
 }
 
 /* ---- Nav ---- */
