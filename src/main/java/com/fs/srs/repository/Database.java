@@ -15,16 +15,12 @@ import java.sql.Statement;
 import java.util.stream.Collectors;
 
 /**
- * Tiny helper that owns the single SQLite {@link Connection} used by all
- * repositories and bootstraps the schema on first run.
- * <p>
- * A single shared connection is fine because SQLite serializes writes
- * internally and Javalin handles requests on a pool of threads that all
- * go through the same connection (same-process access only).
+ * this generates the single sql database connection creates schema.sql on the first run
+
  */
 public final class Database {
 
-    private final Connection connection;
+    private final Connection connection; 
 
     public Database(String jdbcUrl) {
         try {
@@ -38,7 +34,7 @@ public final class Database {
         }
     }
 
-    /** Creates a {@code Database} backed by a file at {@code ./data/srs.db}. */
+    /** Creates the datavase file on local device  */
     public static Database openDefault() {
         try {
             Files.createDirectories(Paths.get("data"));
