@@ -1,6 +1,6 @@
 package com.fs.srs.domain;
 
-/** A regular employee this category of user can submit requests and comment on their own requests. */
+/** A regular employee EMP this category of user can submit requests and comment only on own requests. */
 public class Employee extends User {
 
     public Employee(Long id, String username, String password, String fullName, String email) {
