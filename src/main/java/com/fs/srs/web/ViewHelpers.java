@@ -7,8 +7,7 @@ import com.fs.srs.domain.User;
 import java.time.format.DateTimeFormatter;
 
 /**
- * Tiny HTML helpers. Kept deliberately simple — this module could be swapped
- * for a real template engine (JTE, Thymeleaf) later without touching services.
+ * these ar HTML helpers. 
  */
 public final class ViewHelpers {
 
@@ -16,7 +15,7 @@ public final class ViewHelpers {
 
     private ViewHelpers() {}
 
-    /** Escape a user-supplied string so it is safe to drop into HTML. */
+    /** Escape a user supplied string so it is safe to drop into HTML. */
     public static String esc(String s) {
         if (s == null) return "";
         StringBuilder sb = new StringBuilder(s.length());
