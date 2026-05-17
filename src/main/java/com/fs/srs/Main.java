@@ -19,11 +19,7 @@ import com.fs.srs.web.WebApp;
 import io.javalin.Javalin;
 
 /**
- * Application entry point.
- * <p>
- * Assembles the layers: Database -> Repositories -> Services -> WebApp.
- * This is "dependency injection by hand" — simple enough for a student
- * project, and it makes the assembly order obvious for the grader.
+ * Application entry point it connects the layers: Database + Repositories + Services + WebApp.
  */
 public final class Main {
 
@@ -35,7 +31,7 @@ public final class Main {
         UserRepository userRepo = new SqliteUserRepository(db);
         RequestRepository requestRepo = new SqliteRequestRepository(db, userRepo);
 
-        // 2. Seed demo data on first run (idempotent)
+        // 2. Seed demo data on first run 
         Seed.run(userRepo, requestRepo);
 
         // 3. Services
@@ -64,7 +60,7 @@ public final class Main {
                 """.formatted(port));
     }
 
-    /** One-off demo seeding — only inserts data if the users table is empty. */
+    /** data for demo purpose it only inserts data if the users table is empty. */
     private static final class Seed {
         static void run(UserRepository userRepo, RequestRepository requestRepo) {
             if (!userRepo.findAll().isEmpty()) return;
