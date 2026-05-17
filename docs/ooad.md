@@ -1,8 +1,7 @@
 # Enterprise Service Request Management System
 ## OO Analysis & Design 
 
-*Course:* Systems Development (Prof. Dr. Kai Spohrer, Frankfurt School)
-*Deliverable:* OOAD document (Session 1 group project)
+Course: Systems Development (Prof. Dr. Kai Spohrer)
 
 ---
 
