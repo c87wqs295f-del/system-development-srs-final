@@ -1,7 +1,6 @@
 # Contribution Statement
 
-*Course:* Systems Development (Prof. Dr. Kai Spohrer, Frankfurt School)
-*Required by:* Session 1 group project brief
+Course: Systems Development (Prof. Dr. Kai Spohrer)
 
 This document records who contributed what, so that individual grades can
 be fair and the interview can start from a shared picture of the work.
