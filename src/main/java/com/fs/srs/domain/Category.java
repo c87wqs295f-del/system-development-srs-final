@@ -1,8 +1,7 @@
 package com.fs.srs.domain;
 
 /**
- * The business department a request belongs to.
- * Using an enum (not a String) makes invalid categories impossible at compile time.
+ * The business department a request belongs to. Using enum instead of int so there can be no false Department assignements
  */
 public enum Category {
     IT,
