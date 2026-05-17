@@ -7,9 +7,9 @@ import java.util.Optional;
 
 /**
  * Abstraction over user storage. The service layer depends only on this
- * interface (Dependency Inversion, Session 6) so that we could swap the
- * SQLite implementation for an in-memory one or a different database
- * without touching any business code.
+ * interface so that we could swap the
+ * SQL implementation for an in memory one or a different database
+ * without changimg any business code.
  */
 public interface UserRepository {
 
@@ -19,6 +19,5 @@ public interface UserRepository {
 
     List<User> findAll();
 
-    /** Persists a new user and assigns an id, or updates an existing one. */
     void save(User user);
 }
