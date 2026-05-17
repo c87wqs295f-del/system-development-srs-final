@@ -329,7 +329,7 @@ Services depend on repository abstractions instead of concrete implementations.
 | Single shared JDBC connection       | Fits SQLite's single-writer design             | Limited scalability                             |
 | Abstract `User` hierarchy           | Clear domain structure and polymorphism        | One additional class per role                   |
 | Repository interfaces               | Better testability and flexibility             | Slightly more boilerplate                       |
-
+| Render deployment | Simple cloud deployment for demonstration and remote testing | Limited compared to full production infrastructure |
 ---
 
 # 6. Testing
