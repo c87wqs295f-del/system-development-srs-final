@@ -5,10 +5,7 @@ import com.fs.srs.exceptions.AuthenticationException;
 import com.fs.srs.repository.UserRepository;
 
 /**
- * Single responsibility: verify credentials and return the authenticated user.
- * <p>
- * Depends on {@link UserRepository} (the abstraction), not on the SQLite
- * implementation — this is textbook Dependency Inversion (Session 6).
+ * this is our login authentication a user can only access if the login data is right
  */
 public class AuthService {
 
@@ -18,18 +15,14 @@ public class AuthService {
         this.users = users;
     }
 
-    /**
-     * Verify credentials and return the logged-in user.
-     *
-     * @throws AuthenticationException if username or password is wrong
-     */
+   
     public User login(String username, String password) {
         if (username == null || password == null) {
-            throw new AuthenticationException("Username and password are required");
+            throw new AuthenticationException("Username and password are required"); /* when a user clicks logib without typing the credentials*/
         }
-        User user = users.findByUsername(username)
+        User user = users.findByUsername(username)                                    /*for wrong login data*/
                 .orElseThrow(() -> new AuthenticationException("Unknown user"));
-        if (!user.getPassword().equals(password)) {
+        if (!user.getPassword().equals(password)) { 
             throw new AuthenticationException("Incorrect password");
         }
         return user;
