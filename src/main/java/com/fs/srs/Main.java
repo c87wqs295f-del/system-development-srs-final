@@ -28,7 +28,7 @@ import io.javalin.Javalin;
 public final class Main {
 
     public static void main(String[] args) {
-        int port = Integer.parseInt(System.getProperty("port", "7070"));
+        int port = Integer.parseInt(System.getenv().getOrDefault("PORT", System.getProperty("port", "7070")));
 
         // 1. Persistence
         Database db = Database.openDefault();
