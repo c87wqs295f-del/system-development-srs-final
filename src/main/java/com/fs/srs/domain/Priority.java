@@ -1,10 +1,7 @@
 package com.fs.srs.domain;
 
 /**
- * Priority level with an associated SLA (Service Level Agreement) in hours.
- * <p>
- * Demonstrates that Java enums are real classes that can carry state and
- * behavior (see Session 2: "a class bundles state and behavior").
+ * Priority level with an associated Service Level Agreement in hours.
  */
 public enum Priority {
     URGENT(4),
@@ -18,7 +15,7 @@ public enum Priority {
         this.slaHours = slaHours;
     }
 
-    /** @return the SLA target for a request with this priority, in hours */
+    /** @return the Service Level Agreement target for a request with this priority, in hours */
     public int getSlaHours() {
         return slaHours;
     }
