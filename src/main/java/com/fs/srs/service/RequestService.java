@@ -17,9 +17,8 @@ import com.fs.srs.repository.UserRepository;
 import java.util.List;
 
 /**
- * Application service that orchestrates request operations and enforces
- * role-based authorization. It relies on Request domain
- * Depends on the repository interfaces only Swapping SQLite for another backing store does not change this class.
+ * Application service that orchestrates request operations and role based login. It relies on Request domain
+ * Depends on the repository interfaces only Swapping SQL for another backing store does not change this class.
  */
 public class RequestService {
 
