@@ -45,52 +45,13 @@ the approximate hour split.
 | Deployment        | Render (free web service tier) for the demo URL     | Reads `PORT` env var; no secrets in the repository      |
 
 
-### 2.1 AI-supported tools
+### 2.1 Usage of LLM
 
-Consistent with `docs/contribution-statement.md` §5, AI-supported tools
-(OpenAI ChatGPT and Anthropic Claude, via their respective web interfaces)
-were used during the project as supporting development tools. They were
-**not** used to design the system, to choose the architecture, or to author
-the business logic.
-
-Concretely, AI tools were used in the following situations:
-
-- **Frontend / HTML / CSS scaffolding.** Web/UI work was not covered in
-  depth during the course, so AI was used to suggest initial markup
-  structure for the Javalin text-block templates (e.g. the table layout in
-  `RequestController.list`, the form structure in `showNewForm`/`showLogin`)
-  and to suggest CSS variable naming and the colour palette in
-  `style.css`. All output was reviewed, simplified, and adapted by the team
-  before commit.
-- **Documentation polishing.** Rough team-written bullet points for the
-  OOAD document, the testing-strategy note, and ticket descriptions were
-  occasionally passed through an AI tool to tighten prose and check
-  consistency of terminology. Technical content (requirements, design
-  decisions, trade-offs) originates from the team.
-- **Debugging and framework Q&A.** Short, targeted questions about Javalin
-  6 routing, SQLite JDBC parameter binding, and JUnit 5 `@TempDir` usage —
-  the kind of question normally answered by reading the framework docs
-  faster.
-- **Repetitive boilerplate.** First drafts of the `rowToUser` /
-  `rowToRequest` JDBC mappers and the symmetric `bindCommon` parameter
-  binder in `SqliteRequestRepository` were generated as scaffolding and then
-  edited by the team to match our own naming, error handling, and the rest
-  of the codebase.
-- **Demo brand mark.** The `WinTick` logo image at
-  `src/main/resources/static/logo.png` was generated with an AI image tool
-  from team-written prompts and used as a placeholder demo brand. It does
-  not represent a real product or organisation and is included only so the
-  application has a recognisable header during the demo.
-
-All AI suggestions were treated as drafts, not as authoritative output.
-Final responsibility for every committed line rests with the team. Where an
-AI suggestion was wrong (it occasionally proposed JPA-style annotations,
-Lombok, or Javalin 4 syntax), it was discarded. The architecture, the
-domain model, the lifecycle state machine, the authorization matrix, the
-test design, and the SQLite schema were designed and implemented by the
-team without AI authorship.
-
-No AI tool, dataset, or model output is shipped inside the repository.
+AI-supported tools such as ChatGPT and Claude were used throughout the project as part of the development workflow.
+The overall architecture, class design, domain model, lifecycle logic, Jira organization, and UML/ER diagrams were shaped by the team, with AI tools used as a sounding board, drafting aid, and coding assistant along the way. For the Java implementation, AI was used to support the coding process, with the team directing the design decisions and integrating the results.
+Jira tickets, task structure, and ticket titles were created by the team. ChatGPT was used to refine ticket descriptions and acceptance criteria based on team-written ideas and implementation goals.
+AI support played a more substantial role in areas that were not covered in detail during the course, particularly frontend implementation and UI-related code, where it contributed significantly to both initial drafts and iterative development. AI tools were also used to refine documentation text based on team-written notes, assist with repetitive code such as JDBC row mappers and HTML templates, support debugging, and explain framework behavior.
+All AI-assisted output — including code — was reviewed, adapted, tested, and integrated by the team. Final technical decisions, application structure, business rules, and testing logic remained the responsibility of the project members.
 
 ---
 
