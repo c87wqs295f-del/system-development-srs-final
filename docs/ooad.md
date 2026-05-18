@@ -39,11 +39,11 @@ Excluded features:
 
 ## 1.3 Actors and roles
 
-* **Employee** — submits requests, comments on own requests, closes resolved
+* **Employee** - submits requests, comments on own requests, closes resolved
   requests.
-* **Service Agent** — takes ownership of requests, updates lifecycle states,
+* **Service Agent** - takes ownership of requests, updates lifecycle states,
   requests additional information, and resolves requests.
-* **Manager** — oversees all requests, reassigns tickets, changes priorities,
+* **Manager** - oversees all requests, reassigns tickets, changes priorities,
   and can execute every allowed lifecycle transition.
 
 ---
@@ -113,7 +113,7 @@ During development, we focused on keeping the architecture understandable and ea
 
 ## 3.2 Domain classes
 
-### `User` — abstract base class
+### `User` - abstract base class
 
 `User` contains shared attributes and behavior that apply to all users.
 The class is abstract because a generic user never exists directly in the
