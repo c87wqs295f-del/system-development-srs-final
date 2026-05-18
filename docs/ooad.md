@@ -441,9 +441,11 @@ collaboratively before implementation.
 
 1. Run:
    `mvn clean package && java -jar target/srs.jar`
-
-2. Open:
+and open
    `http://localhost:7070`
+or open
+   `https://system-development-srs-final.onrender.com/login`
+
 
 3. Log in as `emp1` / `pw` and submit a request.
 
