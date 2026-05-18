@@ -9,6 +9,7 @@ service requests and lets agents and managers drive them through a lifecycle.
 
 - Java 17 or newer
 - Maven 3.6+ (or the Maven wrapper that Eclipse provides)
+  
 
 ## Run it
 
@@ -20,6 +21,8 @@ java -jar target/srs.jar
 Then open <http://localhost:7070> in your browser.
 
 On first run the app creates `data/srs.db` and seeds a demo dataset.
+
+Alternatively, build and run with Docker: `docker build -t srs . && docker run -p 7070:7070 srs`. A live demo is also available at <https://system-development-srs-final.onrender.com/login>.
 
 ### Demo accounts (passwords are literally `pw`)
 
