@@ -39,7 +39,7 @@ the approximate hour split.
 | Test framework    | JUnit Jupiter 5.10.2                                | Surefire 3.2.5; reports in `target/surefire-reports/`   |
 | Version control   | Git + GitHub                                        | Public repository under `c87wqs295f-del`                |
 | Issue tracker     | Jira (project key WT)                               | One ticket per feature/bug; linked from commit messages |
-| Diagramming       | draw.io (29.6.6) for UML; hand-written SVG for ER   | Source files: `docs/class-diagram.drawio`, `docs/er-diagram.svg` |
+| Diagramming       | draw.io (29.6.6) for UML and ER                     | Source files: `docs/class-diagram.drawio`, `docs/erdiagram.drawio` |
 | Slides            | Microsoft PowerPoint                                | `docs/presentation.pptx`                                |
 | Containerization  | Docker (added for the live demo)                    | `Dockerfile` based on `maven:3.9.9-eclipse-temurin-17`  |
 | Deployment        | Render (free web service tier) for the demo URL     | Reads `PORT` env var; no secrets in the repository      |
