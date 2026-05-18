@@ -216,7 +216,7 @@ stored as ISO-8601 strings.
 
 Enums are stored using their `name()` value so the database stays easier to read during development.
 
-See `docs/er-diagram.drawio`.
+See `docs/erdiagram.drawio`.
 
 ## 3.6 Request lifecycle (state machine)
 
@@ -429,7 +429,7 @@ collaboratively before implementation.
 * **Source code:** `src/main/java/com/fs/srs/`
 * **Tests:** `src/test/java/com/fs/srs/`
 * **Class diagram:** `class-diagram.drawio`
-* **ER diagram:** `docs/er-diagram.drawio`
+* **ER diagram:** `docs/erdiagram.drawio`
 * **Testing strategy:** `docs/testing-strategy.md`
 * **Code provenance:** `docs/code-provenance.md`
 * **Contribution statement:** `docs/contribution-statement.md`
