@@ -117,7 +117,7 @@ During development, we focused on keeping the architecture understandable and ea
 
 `User` contains shared attributes and behavior that apply to all users.
 The class is abstract because a generic user never exists directly in the
-system — every user must belong to a concrete role.
+system - every user must belong to a concrete role.
 
 The subclasses `Employee`, `ServiceAgent`, and `Manager` each override
 `getRole()` individually, allowing the service layer to work with the common
@@ -187,8 +187,8 @@ See `docs/class-diagram.svg`.
 Key relationships:
 
 * Inheritance: `User` ← `Employee` / `ServiceAgent` / `Manager`
-* Composition: `Request` ◆—— `Comment`
-* Association: `Request` — `User`
+* Composition: `Request` ◆-- `Comment`
+* Association: `Request` - `User`
 * Realization: SQLite repositories implement repository interfaces
 * Dependency: services depend on repository interfaces
 
