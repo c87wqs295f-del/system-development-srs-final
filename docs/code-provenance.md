@@ -17,10 +17,10 @@ came from*.
 
 | Name                      | Student ID    | Role on this project                         | GitHub                   |
 |---------------------------|---------------|----------------------------------------------|--------------------------|
-| Kevin Luca Queckbörner    | _TO FILL IN_  | Architecture & service layer, web flow       | `kevinlqueck`            |
-| Melvin Borse              | _TO FILL IN_  | Domain model, state machine, tests           | `Melvin1903`             |
-| Patricia G.               | _TO FILL IN_  | OOAD documentation, UML & ER diagrams        | `Pati-carioca`           |
-| Kaan A.                   | _TO FILL IN_  | Persistence layer, schema, demo & deployment | `kaanap`                 |
+| Kevin Luca Queckbörner    | 8510697       | Architecture & service layer, web flow       | `kevinlqueck`            |
+| Melvin Borse              | 8514759       | Domain model, state machine, tests           | `Melvin1903`             |
+| Patricia G.               | 8511123       | OOAD documentation, UML & ER diagrams        | `Pati-carioca`           |
+| Kaan A.                   | 8510374       | Persistence layer, schema, demo & deployment | `kaanap`                 |
 
 All four members contributed to architectural discussions, code review,
 testing, presentation rehearsal, and Jira board upkeep. See
@@ -43,6 +43,7 @@ the approximate hour split.
 | Slides            | Microsoft PowerPoint                                | `docs/presentation.pptx`                                |
 | Containerization  | Docker (added for the live demo)                    | `Dockerfile` based on `maven:3.9.9-eclipse-temurin-17`  |
 | Deployment        | Render (free web service tier) for the demo URL     | Reads `PORT` env var; no secrets in the repository      |
+
 
 ### 2.1 AI-supported tools
 
@@ -75,6 +76,11 @@ Concretely, AI tools were used in the following situations:
   binder in `SqliteRequestRepository` were generated as scaffolding and then
   edited by the team to match our own naming, error handling, and the rest
   of the codebase.
+- **Demo brand mark.** The `WinTick` logo image at
+  `src/main/resources/static/logo.png` was generated with an AI image tool
+  from team-written prompts and used as a placeholder demo brand. It does
+  not represent a real product or organisation and is included only so the
+  application has a recognisable header during the demo.
 
 All AI suggestions were treated as drafts, not as authoritative output.
 Final responsibility for every committed line rests with the team. Where an
@@ -115,30 +121,7 @@ licensing terms.
 
 ---
 
-## 4. Material learned from course slides
-
-The design and terminology explicitly follow the course lectures. Where a
-design decision is directly traceable to a slide, this is also cited in
-`docs/ooad.md`.
-
-- **Session 1** — project brief, problem statement, functional
-  requirements, request lifecycle.
-- **Session 2** — Java classes, fields/methods/visibility, constructors,
-  inheritance, polymorphism and overriding (`User` ← `Employee` /
-  `ServiceAgent` / `Manager`).
-- **Session 5** — abstract classes (`User`), custom checked vs. unchecked
-  exceptions (`InvalidStatusTransitionException`, `AuthenticationException`,
-  `AuthorizationException`, `ValidationException`).
-- **Session 6** — UML notation (visibility, cardinality, association vs.
-  aggregation vs. composition), SOLID principles, "low representational
-  gap" between domain language and code.
-
-The lifecycle state machine in `Request.ALLOWED_TRANSITIONS` is our own
-formalisation of the lifecycle sketched in the Session 1 brief.
-
----
-
-## 5. Code originality
+## 4. Code originality
 
 All Java source files in `src/main/java/com/fs/srs/` and all test files in
 `src/test/java/com/fs/srs/` were written by the team. No code was copied
@@ -165,20 +148,20 @@ The team is the sole author of:
   HTML text-block templates in the controllers (with the scaffolding
   caveat noted in §2.1).
 
-Where AI was used as a scaffolding aid — primarily the JDBC row mappers
-and parts of the HTML/CSS — the resulting code was reviewed, edited and
+Where AI was used as a scaffolding aid, primarily the JDBC row mappers
+and parts of the HTML/CSS. The resulting code was reviewed, edited and
 re-styled by the team before commit, so that no committed file is a raw
 AI artefact. The Git history (56 commits over 13–18 May 2026) shows the
 incremental, file-by-file refinement work that this entailed.
 
 ---
 
-## 6. Third-party assets
+## 5. Third-party assets
 
 | Asset                                           | Origin                                                                                            | License / status                          |
 |-------------------------------------------------|---------------------------------------------------------------------------------------------------|-------------------------------------------|
 | `src/main/resources/static/style.css`           | Written by the team (primary author: Kaan A., reviewed by Patricia G. — see contribution table). | Team-owned; no external CSS frameworks    |
-| `src/main/resources/static/logo.png` (WinTick)  | Created by the team for this project as the demo brand mark.                                      | Team-owned; not derived from any existing trademark |
+| `src/main/resources/static/logo.png` (WinTick)  | Generated with an AI image tool (see §2.1) from team-written prompts and used as the demo brand mark for this project. "WinTick" is an invented name with no intended reference to any real organisation. | Team-owned for the purposes of this coursework |
 | Fonts                                           | System fonts only (`Nunito`, `Segoe UI`, `system-ui`, `Roboto`).                                  | Loaded from the user's OS — no font files shipped |
 | Favicon                                         | None shipped.                                                                                     | n/a                                       |
 | UML / ER diagrams                               | Authored by the team in draw.io and as hand-written SVG.                                          | Team-owned                                |
@@ -189,7 +172,7 @@ included in this repository.
 
 ---
 
-## 7. Data sources
+## 6. Data sources
 
 The demo dataset created by `Main.Seed` on first run is entirely
 fictional. The five seeded user accounts (`manager1`, `agent1`, `agent2`,
@@ -209,30 +192,7 @@ real system.
 
 ---
 
-## 8. Repository history as evidence
-
-The provenance claims above are independently checkable from the public
-Git history:
-
-- The repository was initialised on **13 May 2026** with the Maven project
-  skeleton (`Restructure Java Maven project`, Kaan A.) and an initial
-  upload of the OOAD draft (Melvin B.).
-- Iterative refinement of the Java source took place across **17 May
-  2026**, with the per-file `Update <ClassName>.java` commit pattern
-  showing layer-by-layer work (exceptions → domain → repositories →
-  services → web → `Main.java`).
-- The documentation, demo Dockerfile, branding (`WinTick` logo), and
-  Render deployment were finalised on **17–18 May 2026**.
-- Commit authorship across the four members maps cleanly to the
-  responsibilities declared in `docs/contribution-statement.md`.
-
-The contents of `target/` (`srs.jar`, surefire reports, compiled
-`.class` files) are build artefacts produced by `mvn package` and are
-not authored content.
-
----
-
-## 9. Copyright
+## 7. Copyright
 
 We confirm that:
 
@@ -242,8 +202,8 @@ We confirm that:
    licenses listed in §3, and our use complies with each license's
    terms (attribution preserved in the Maven dependency metadata; no
    redistribution of modified third-party source).
-3. We have not included any copyrighted material — text, images, code,
-   trademarks, or data — for which we do not hold a license or fair-use
+3. We have not included any copyrighted material, text, images, code,
+   trademarks, or data, for which we do not hold a license or fair-use
    right.
 4. The "WinTick" name and logo are an invented brand created for this
    academic exercise and do not refer to any real product or
@@ -251,7 +211,7 @@ We confirm that:
 
 ---
 
-## 10. Declaration
+## 8. Declaration
 
 We confirm that the submitted code is our own work, that external sources
 are properly attributed above, that any use of AI-supported tools is
