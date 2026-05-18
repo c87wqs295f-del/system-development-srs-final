@@ -164,7 +164,7 @@ incremental, file-by-file refinement work that this entailed.
 | `src/main/resources/static/logo.png` (WinTick)  | Generated with an AI image tool (see §2.1) from team-written prompts and used as the demo brand mark for this project. "WinTick" is an invented name with no intended reference to any real organisation. | Team-owned for the purposes of this coursework |
 | Fonts                                           | System fonts only (`Nunito`, `Segoe UI`, `system-ui`, `Roboto`).                                  | Loaded from the user's OS — no font files shipped |
 | Favicon                                         | None shipped.                                                                                     | n/a                                       |
-| UML / ER diagrams                               | Authored by the team in draw.io and as hand-written SVG.                                          | Team-owned                                |
+| UML / ER diagrams                               | Authored by the team in draw.io.                                                                  | Team-owned                                |
 | Presentation deck (`docs/presentation.pptx`)    | Authored by the team in PowerPoint.                                                               | Team-owned                                |
 
 No images, icons, audio or other media from third-party catalogues are
