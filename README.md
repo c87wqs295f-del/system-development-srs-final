@@ -44,12 +44,12 @@ mvn -Dtest='*ServiceTest' test                 # run all service tests
 
 The suite has three tiers:
 
-- **Domain tests** (`src/test/java/com/fs/srs/domain/`) — pure JUnit, no
+- **Domain tests** (`src/test/java/com/fs/srs/domain/`) - pure JUnit, no
   database, no services. Proves the state machine in `Request.transitionTo`
   and the SLA hours in `Priority`.
-- **Service tests** (`src/test/java/com/fs/srs/service/`) — uses an in-memory
+- **Service tests** (`src/test/java/com/fs/srs/service/`) - uses an in-memory
   repository fake. Proves every role × action authorization rule.
-- **Integration test** (`src/test/java/com/fs/srs/repository/`) — boots a
+- **Integration test** (`src/test/java/com/fs/srs/repository/`) - boots a
   real SQLite database in a `@TempDir`. Proves the round-trip mapping.
 
 ## Import into Eclipse
@@ -66,7 +66,7 @@ src/main/java/com/fs/srs/
   repository/    storage abstraction + SQLite implementations
   service/       application services (auth, request orchestration)
   web/           Javalin bootstrap, controllers, HTML helpers
-  Main.java      entry point — wires the layers together
+  Main.java      entry point - wires the layers together
 src/main/resources/
   schema.sql     SQLite DDL (applied on first run)
   static/        CSS assets served under /static
@@ -76,11 +76,11 @@ docs/            OOAD document, class diagram, provenance statement
 
 ## Technology choices
 
-- **Javalin** — embedded Jetty; one dependency, starts in < 1 s.
-- **SQLite via JDBC** — zero install; `sqlite-jdbc` bundles the native binary.
-- **Plain-text passwords** — *deliberate* scope decision for a course project.
+- **Javalin** - embedded Jetty; one dependency, starts in < 1 s.
+- **SQLite via JDBC** - zero install; `sqlite-jdbc` bundles the native binary.
+- **Plain-text passwords** - *deliberate* scope decision for a course project.
   See the OOAD doc for rationale and the production upgrade path.
-- **No ORM** — JDBC + custom repositories are easy to read and explain.
+- **No ORM** - JDBC + custom repositories are easy to read and explain.
 
 ## Changing the port
 
