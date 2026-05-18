@@ -182,7 +182,7 @@ We intentionally used a lightweight technology stack so that all important parts
 
 ## 3.4 UML Class Diagram
 
-See `docs/class-diagram.svg`.
+See `class-diagram.drawio`.
 
 Key relationships:
 
@@ -428,7 +428,7 @@ collaboratively before implementation.
 
 * **Source code:** `src/main/java/com/fs/srs/`
 * **Tests:** `src/test/java/com/fs/srs/`
-* **Class diagram:** `docs/class-diagram.svg`
+* **Class diagram:** `class-diagram.drawio`
 * **ER diagram:** `docs/er-diagram.svg`
 * **Testing strategy:** `docs/testing-strategy.md`
 * **Code provenance:** `docs/code-provenance.md`
