@@ -81,5 +81,5 @@ demo scenario. The SQLite connection is the synchronization point.
 mvn test
 ```
 
-Expected result at the time of writing: **~40 test methods**, all green,
+Expected result at the time of writing: **~46 test methods**, all green,
 running in under 3 seconds on a modern laptop.
