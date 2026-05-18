@@ -52,33 +52,35 @@ These were decided together in team meetings and belong to the whole group:
 ## 4. Evidence in the repository
 
 - **Git commits** on the GitHub repository. Each feature branch is authored
-  by the primary contributor above; pull-request reviews by the stated
+  by the primary contributor above; reviews were done by the stated
   reviewers.
 - **Jira tickets** Every ticket is assigned to the
   person who implemented it; review comments are part of the ticket history.
 
 ## 5. Use of AI-supported tools
 
-AI-supported tools such as ChatGPT and Claude were used selectively during the
+AI-supported tools such as ChatGPT and Claude were used during the
 project as supporting development tools.
 
-The overall architecture, class design, domain model, lifecycle logic, Java
-implementation, Jira organization, and UML/ER diagrams were developed by the
-team independently.
+The overall architecture, class design, domain model, lifecycle logic,
+Java implementation, Jira organization, and UML/ER diagrams were
+developed by the team, with AI tools used as a sounding board and
+drafting aid along the way.
 
-Jira tickets, task structure, and ticket titles were created by the team.
-ChatGPT was occasionally used to refine ticket descriptions and acceptance
+Jira tickets, task structure, and ticket titles were created by the
+team. ChatGPT was used to refine ticket descriptions and acceptance
 criteria based on team-written ideas and implementation goals.
 
-AI support was mainly used in areas that were not covered in detail during the
-course, especially frontend implementation and UI-related code. In addition,
-AI tools were used to refine documentation text based on team-written bullet
-points, support debugging, explain framework behavior, and speed up repetitive
-implementation tasks.
+AI support was used in areas that were not covered in detail during
+the course, in particular frontend implementation and UI-related code,
+where it contributed substantially to initial drafts. In addition, AI
+tools were used to refine documentation text based on team-written
+notes, draft repetitive code such as JDBC row mappers and HTML
+templates, support debugging, and explain framework behavior.
 
-All generated suggestions were reviewed, adapted, and integrated manually by
-the team. Final technical decisions, application structure, business rules,
-and testing logic remained the responsibility of the project members.
+All generated suggestions were reviewed, adapted, and integrated by
+the team. Final technical decisions, application structure, business
+rules, and testing logic were owned by the project members.
 
 ## 6. Declaration
 
