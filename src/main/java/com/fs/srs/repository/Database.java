@@ -26,7 +26,8 @@ public final class Database {
         try {
             this.connection = DriverManager.getConnection(jdbcUrl);
             try (Statement st = connection.createStatement()) {
-                st.execute("PRAGMA foreign_keys = ON");
+                st.execute("PRAGMA foreign_keys = ON");     /** important so no zombie requests*/
+
             }
             applySchema();
         } catch (SQLException e) {
